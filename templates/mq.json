@@ -21,7 +21,25 @@
     },
     "instances": 1,
     "cpus": {{dariahrepo_app_mq_cpus}},
-    "mem": {{dariahrepo_app_mq_mem}}
+    "mem": {{dariahrepo_app_mq_mem}},
+    "upgradeStrategy": {
+      "maximumOverCapacity": 0,
+      "minimumHealthCapacity": 0
+    },
+    "healthChecks": [
+    {
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "timeoutSeconds": 20,
+      "maxConsecutiveFailures": 3,
+      "delaySeconds": 15,
+      "command": {
+        "value": "rabbitmqctl status"
+      },
+      "protocol": "COMMAND"
+    }
+  ]
+
 
 }
 
