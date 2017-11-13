@@ -57,7 +57,7 @@
       }
     ],
     "dependencies": ["{{dariahrepo_app_cache_id}}", "{{dariahrepo_app_es_id}}", "{{dariahrepo_app_statsd_id}}", "{{dariahrepo_app_mq_id}}", "{{dariahrepo_app_db_id}}"],
-    "cmd": "/bin/bash /code/zenodo/scripts/start.sh,
+    "cmd": "/bin/bash /code/zenodo/scripts/start.sh",
     "instances": 1,
     "cpus": {{dariahrepo_app_web_cpus}},
     "mem": {{dariahrepo_app_web_mem}},
